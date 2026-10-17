@@ -8,12 +8,10 @@ export const SparkleSymbol = ({ className = 'w-6 h-6' }) => (
     xmlns="http://www.w3.org/2000/svg"
     className={`inline-block ${className}`}
   >
-    {/* Central Spark */}
     <path
       d="M12 1.5L14 8.5L21 10.5L14 12.5L12 19.5L10 12.5L3 10.5L10 8.5L12 1.5Z"
       fill="url(#sparkleGoldGradient)"
     />
-    {/* Micro Embers */}
     <circle cx="19" cy="4" r="1.5" fill="#F97316" />
     <circle cx="5" cy="18" r="1.5" fill="#F59E0B" />
     <circle cx="20" cy="18" r="1.2" fill="#FEF08A" />
@@ -28,34 +26,67 @@ export const SparkleSymbol = ({ className = 'w-6 h-6' }) => (
   </svg>
 );
 
-export const BrandLogo = ({ showTagline = true, isDark = true, size = 'default' }) => {
-  const isLarge = size === 'large';
+/**
+ * Official BrandLogo component for Rohan Fireworks
+ * Uses the official brand asset with responsive scaling and exact aspect-ratio preservation.
+ */
+export const BrandLogo = ({
+  size = 'default',
+  variant = 'full',
+  className = '',
+  isLink = true,
+  alt = 'Rohan Fireworks logo',
+  showTagline = true, // Maintained for backwards compatibility
+  isDark = true,
+}) => {
+  // Sizing definitions for horizontal full brand logo (1024x341 aspect ratio)
+  const fullSizeClasses = {
+    small: 'h-8 sm:h-9 max-w-[150px] sm:max-w-[170px]',
+    compact: 'h-9 max-w-[170px]',
+    default: 'h-10 sm:h-11 md:h-12 max-w-[180px] sm:max-w-[210px] md:max-w-[230px]',
+    navbar: 'h-10 sm:h-12 md:h-13 max-w-[180px] sm:max-w-[220px] md:max-w-[250px]',
+    footer: 'h-12 sm:h-14 md:h-16 max-w-[240px] sm:max-w-[280px]',
+    large: 'h-16 sm:h-20 md:h-24 max-w-[300px] sm:max-w-[380px] md:max-w-[440px]',
+  };
+
+  // Sizing definitions for square emblem variant (rohan-icon.png)
+  const iconSizeClasses = {
+    small: 'w-8 h-8',
+    compact: 'w-9 h-9',
+    default: 'w-10 h-10 sm:w-11 sm:h-11',
+    navbar: 'w-10 h-10 sm:w-12 sm:h-12',
+    footer: 'w-12 h-12 sm:w-14 sm:h-14',
+    large: 'w-16 h-16 sm:w-20 sm:h-20',
+  };
+
+  const imageSrc = variant === 'icon' ? '/rohan-icon.png' : '/rohan-fireworks-logo.png';
+  const appliedClass = variant === 'icon'
+    ? (iconSizeClasses[size] || iconSizeClasses.default)
+    : (fullSizeClasses[size] || fullSizeClasses.default);
+
+  const imageContent = (
+    <div className={`relative inline-flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02] ${className}`}>
+      <img
+        src={imageSrc}
+        alt={alt}
+        className={`${appliedClass} w-auto object-contain select-none filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]`}
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  );
+
+  if (!isLink) {
+    return imageContent;
+  }
 
   return (
-    <Link to="/" className="group inline-flex items-center gap-3 transition-opacity hover:opacity-95">
-      <div className="relative flex items-center justify-center p-2 rounded-xl bg-midnight-900 border border-festive-gold/30 shadow-gold group-hover:border-festive-gold/60 transition-all duration-300">
-        <SparkleSymbol className={isLarge ? 'w-8 h-8' : 'w-6 h-6'} />
-        <span className="absolute -top-1 -right-1 flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-festive-gold opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-festive-orange"></span>
-        </span>
-      </div>
-
-      <div className="flex flex-col">
-        <div className="flex items-center gap-1.5 font-display tracking-wider font-extrabold text-slate-100">
-          <span className={`tracking-widest ${isLarge ? 'text-2xl' : 'text-lg sm:text-xl'}`}>
-            ROHAN
-          </span>
-          <span className={`text-transparent bg-clip-text bg-gradient-to-r from-festive-gold via-amber-400 to-festive-orange ${isLarge ? 'text-2xl' : 'text-lg sm:text-xl'}`}>
-            FIREWORKS
-          </span>
-        </div>
-        {showTagline && (
-          <span className="text-[10px] tracking-widest uppercase font-medium text-amber-300/70 font-sans -mt-0.5">
-            Festive Celebrations • Safe Quality
-          </span>
-        )}
-      </div>
+    <Link
+      to="/"
+      className="group inline-flex items-center transition-all duration-200 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-festive-gold/50 rounded-lg"
+      aria-label="Rohan Fireworks — Return to Home"
+    >
+      {imageContent}
     </Link>
   );
 };

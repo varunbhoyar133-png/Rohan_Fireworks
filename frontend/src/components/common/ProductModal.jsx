@@ -23,8 +23,9 @@ export const ProductModal = ({ product, isOpen, onClose }) => {
 
   const isOutOfStock = product.stock <= 0;
   const primaryImage =
-    product.images?.[0] ||
-    'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80';
+    (product.images && product.images.length > 0 && product.images[0])
+      ? product.images[0]
+      : '/placeholder-firework.svg';
 
   const handleAdd = () => {
     if (isOutOfStock) return;
@@ -33,7 +34,7 @@ export const ProductModal = ({ product, isOpen, onClose }) => {
   };
 
   const handleDirectWhatsApp = () => {
-    const rawPhone = settings?.businessInfo?.whatsapp || '+919876543210';
+    const rawPhone = settings?.businessInfo?.whatsapp || '+919699976114';
     const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
     const message = encodeURIComponent(
       `*🪔 Direct Product Enquiry — Rohan Fireworks*\n` +
@@ -92,13 +93,21 @@ export const ProductModal = ({ product, isOpen, onClose }) => {
 
               {/* Price */}
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-2xl font-bold text-festive-gold">
-                  ₹{product.price.toLocaleString('en-IN')}
-                </span>
-                {product.originalPrice && (
-                  <span className="text-sm text-slate-400 line-through">
-                    ₹{product.originalPrice.toLocaleString('en-IN')}
+                {product.priceNeedsReview || !product.price ? (
+                  <span className="text-sm font-bold text-amber-400 bg-amber-950/80 px-2.5 py-1 rounded border border-amber-500/30">
+                    Price on Enquiry (Under Review)
                   </span>
+                ) : (
+                  <>
+                    <span className="text-2xl font-bold text-festive-gold">
+                      ₹{product.price.toLocaleString('en-IN')}
+                    </span>
+                    {product.originalPrice && (
+                      <span className="text-sm text-slate-400 line-through">
+                        ₹{product.originalPrice.toLocaleString('en-IN')}
+                      </span>
+                    )}
+                  </>
                 )}
                 <span className="text-xs text-slate-400">/ {product.packSize || 'pack'}</span>
               </div>

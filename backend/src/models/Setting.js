@@ -44,11 +44,11 @@ const settingSchema = new mongoose.Schema({
   businessInfo: {
     phone: {
       type: String,
-      default: '+91 98765 43210',
+      default: '+91 96999 76114',
     },
     whatsapp: {
       type: String,
-      default: '+91 98765 43210',
+      default: '+91 96999 76114',
     },
     email: {
       type: String,

@@ -44,8 +44,8 @@ export const AdminInventory = () => {
     setLoading(true);
     try {
       const [prodData, logData, overviewData] = await Promise.all([
-        productsAPI.getAll({ limit: 100, includeHidden: 'true' }),
-        inventoryAPI.getLogs({ limit: 30 }),
+        productsAPI.getAll({ limit: 'all', includeHidden: 'true' }),
+        inventoryAPI.getLogs({ limit: 50 }),
         inventoryAPI.getOverview(),
       ]);
 

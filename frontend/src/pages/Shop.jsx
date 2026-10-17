@@ -29,6 +29,7 @@ export const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'all');
   const [sortBy, setSortBy] = useState(searchParams.get('sortBy') || 'newest');
   const [inStockOnly, setInStockOnly] = useState(searchParams.get('inStockOnly') === 'true');
+  const [pageSize, setPageSize] = useState(searchParams.get('limit') || '24');
   const [currentPage, setCurrentPage] = useState(parseInt(searchParams.get('page') || '1', 10));
   const [totalPages, setTotalPages] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
@@ -59,9 +60,10 @@ export const Shop = () => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
+        const isAll = pageSize === 'all';
         const params = {
-          page: currentPage,
-          limit: 12,
+          page: isAll ? 1 : currentPage,
+          limit: pageSize,
           sortBy,
           search: searchQuery,
           inStockOnly: inStockOnly ? 'true' : undefined,
@@ -79,7 +81,8 @@ export const Shop = () => {
         if (selectedCategory !== 'all') newParams.set('category', selectedCategory);
         if (sortBy !== 'newest') newParams.set('sortBy', sortBy);
         if (inStockOnly) newParams.set('inStockOnly', 'true');
-        if (currentPage > 1) newParams.set('page', currentPage.toString());
+        if (pageSize !== '24') newParams.set('limit', pageSize);
+        if (currentPage > 1 && !isAll) newParams.set('page', currentPage.toString());
         setSearchParams(newParams, { replace: true });
       } catch (err) {
         console.error('Error fetching catalogue products:', err);
@@ -89,13 +92,14 @@ export const Shop = () => {
     };
 
     fetchProducts();
-  }, [selectedCategory, sortBy, inStockOnly, currentPage, searchQuery]);
+  }, [selectedCategory, sortBy, inStockOnly, currentPage, searchQuery, pageSize]);
 
   const handleResetFilters = () => {
     setSearchQuery('');
     setSelectedCategory('all');
     setSortBy('newest');
     setInStockOnly(false);
+    setPageSize('24');
     setCurrentPage(1);
     setSearchParams({});
   };
@@ -164,6 +168,24 @@ export const Shop = () => {
               <span>In Stock Only</span>
             </label>
 
+            {/* Page Size Select */}
+            <div className="relative">
+              <select
+                value={pageSize}
+                onChange={(e) => {
+                  setPageSize(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="bg-midnight-900 border border-slate-700 focus:border-festive-gold rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none cursor-pointer"
+                title="Number of fireworks to display per page"
+              >
+                <option value="12">Show: 12 / page</option>
+                <option value="24">Show: 24 / page</option>
+                <option value="48">Show: 48 / page</option>
+                <option value="all">View All (119 Fireworks)</option>
+              </select>
+            </div>
+
             {/* Sort Select */}
             <div className="relative">
               <select
@@ -184,7 +206,7 @@ export const Shop = () => {
           </div>
         </div>
 
-        {/* Category Pills */}
+        {/* Category Pills with Cracker Counts */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
           <button
             onClick={() => {
@@ -197,7 +219,7 @@ export const Shop = () => {
                 : 'bg-midnight-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
             }`}
           >
-            All Products
+            All Fireworks ({categories.reduce((acc, c) => acc + (c.productCount || 0), 0) || totalCount || 119})
           </button>
 
           {categories.map((cat) => (
@@ -213,7 +235,7 @@ export const Shop = () => {
                   : 'bg-midnight-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
               }`}
             >
-              {cat.name}
+              {cat.name} {cat.productCount !== undefined && <span className="opacity-75 text-[10px]">({cat.productCount})</span>}
             </button>
           ))}
         </div>

@@ -96,12 +96,17 @@ npm run install:all
 npm run dev
 ```
 
-> **Note on Database Zero-Configuration:**
-> The backend automatically checks for a MongoDB Atlas or local MongoDB URI. If none is active, it seamlessly launches an embedded in-memory MongoDB engine and seeds the database with the default administrator, 7 festive categories, 16 authentic products, default store settings, and sample customer enquiries. You can test immediately without setting up an external database first!
+> **Note on Database Zero-Configuration & Catalogue Auto-Seed:**
+> The backend automatically checks for a MongoDB Atlas or local MongoDB URI. If none is active, it seamlessly launches an embedded in-memory MongoDB engine and automatically imports all **119 authentic products** directly from the source catalogue (`fireworks list/Jianna Fireworks _119_Price_List.pdf`), including extracted product images, 10 categories, the default administrator, store settings, and sample customer enquiries.
+>
+> To manually re-import or seed the catalogue into an external MongoDB instance:
+> ```bash
+> npm run import:catalogue
+> ```
 
 Visit the application in your browser:
 - **Storefront:** [http://localhost:5173/](http://localhost:5173/)
-- **Catalogue:** [http://localhost:5173/shop](http://localhost:5173/shop)
+- **Catalogue (119 Products):** [http://localhost:5173/shop](http://localhost:5173/shop)
 - **Admin Portal:** [http://localhost:5173/admin/login](http://localhost:5173/admin/login)
 - **API Health Check:** [http://localhost:5000/api/health](http://localhost:5000/api/health)
 
@@ -193,7 +198,9 @@ Fireworks/
 │   │   │   └── Setting.js            # Dynamic store configuration
 │   │   ├── routes/                   # API endpoint routes
 │   │   ├── scripts/
-│   │   │   ├── seed.js               # Initial database seed script
+│   │   │   ├── seed.js               # Initial database seed script (119 products)
+│   │   │   ├── importCatalogue.js    # CLI utility to re-import catalogue
+│   │   │   ├── verify_import.py      # Automated audit script vs source PDF
 │   │   │   └── createAdmin.js        # CLI utility to create/reset admin
 │   │   └── server.js                 # Express server & CORS configuration
 │   ├── .env.example

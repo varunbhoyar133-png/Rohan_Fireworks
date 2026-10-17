@@ -21,6 +21,9 @@ build/
 # Uploads directory (user-generated media)
 backend/uploads/*
 !backend/uploads/.gitkeep
+!backend/uploads/catalogue/
+!backend/uploads/catalogue/**
+!backend/uploads/placeholder-firework.svg
 
 # System and IDE Files
 .DS_Store

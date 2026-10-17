@@ -15,7 +15,7 @@ import { useStoreSettings } from '../context/StoreSettingsContext';
 export const Contact = () => {
   const { settings } = useStoreSettings();
   const info = settings?.businessInfo || {};
-  const cleanWhatsApp = (info.whatsapp || '+919876543210').replace(/[^0-9]/g, '');
+  const cleanWhatsApp = (info.whatsapp || '+919699976114').replace(/[^0-9]/g, '');
 
   const [form, setForm] = useState({
     name: '',
@@ -74,7 +74,7 @@ export const Contact = () => {
                   href={`tel:${info.phone}`}
                   className="font-display font-bold text-base text-slate-100 hover:text-festive-gold transition-colors"
                 >
-                  {info.phone || '+91 98765 43210'}
+                  {info.phone || '+91 96999 76114'}
                 </a>
               </div>
             </div>
@@ -94,7 +94,7 @@ export const Contact = () => {
                   WhatsApp Support
                 </h3>
                 <span className="font-display font-bold text-base text-slate-100">
-                  {info.whatsapp || '+91 98765 43210'}
+                  {info.whatsapp || '+91 96999 76114'}
                 </span>
               </div>
             </div>
@@ -217,7 +217,7 @@ export const Contact = () => {
                       required
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="e.g. +91 98765 43210"
+                      placeholder="e.g. +91 96999 76114"
                       className="w-full bg-midnight-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-festive-gold"
                     />
                   </div>

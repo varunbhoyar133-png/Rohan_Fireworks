@@ -1,0 +1,954 @@
+[
+  {
+    "page": 1,
+    "raw_line": "500ShotsStandard 12500",
+    "name": "500ShotsStandard",
+    "price": 12500,
+    "image_name": "I52.jpg",
+    "has_image": true
+  },
+  {
+    "page": 1,
+    "raw_line": "240MCshotsMercury 3800",
+    "name": "240MCshotsMercury",
+    "price": 3800,
+    "image_name": "I53.jpg",
+    "has_image": true
+  },
+  {
+    "page": 1,
+    "raw_line": "240MulticolourTerkheda 3800",
+    "name": "240MulticolourTerkheda",
+    "price": 3800,
+    "image_name": "I54.jpg",
+    "has_image": true
+  },
+  {
+    "page": 1,
+    "raw_line": "120ShotsRhyno 1760",
+    "name": "120ShotsRhyno",
+    "price": 1760,
+    "image_name": "I55.jpg",
+    "has_image": true
+  },
+  {
+    "page": 1,
+    "raw_line": "120Shots Tekheda 1500",
+    "name": "120Shots Tekheda",
+    "price": 1500,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 2,
+    "raw_line": "60ShotsMulticolour 960",
+    "name": "60ShotsMulticolour",
+    "price": 960,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 2,
+    "raw_line": "50ShotsMulticolour 1150",
+    "name": "50ShotsMulticolour",
+    "price": 1150,
+    "image_name": "I56.png",
+    "has_image": true
+  },
+  {
+    "page": 2,
+    "raw_line": "50Shots Crackling 600",
+    "name": "50Shots Crackling",
+    "price": 600,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 2,
+    "raw_line": "30ShotsStandard 650",
+    "name": "30ShotsStandard",
+    "price": 650,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 2,
+    "raw_line": "30ShotsMulticolour 480",
+    "name": "30ShotsMulticolour",
+    "price": 480,
+    "image_name": "I58.jpg",
+    "has_image": true
+  },
+  {
+    "page": 2,
+    "raw_line": "25M.ClrShotsMoorthy 600",
+    "name": "25M.ClrShotsMoorthy",
+    "price": 600,
+    "image_name": "I59.jpg",
+    "has_image": true
+  },
+  {
+    "page": 3,
+    "raw_line": "25ShotsCrackling 300",
+    "name": "25ShotsCrackling",
+    "price": 300,
+    "image_name": "I60.jpg",
+    "has_image": true
+  },
+  {
+    "page": 3,
+    "raw_line": "15ShotsM.C 350",
+    "name": "15ShotsM.C",
+    "price": 350,
+    "image_name": "I61.jpg",
+    "has_image": true
+  },
+  {
+    "page": 3,
+    "raw_line": "12ShotsMulticolourBigShower 350",
+    "name": "12ShotsMulticolourBigShower",
+    "price": 350,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 3,
+    "raw_line": "12ShotMulticolour 190",
+    "name": "12ShotMulticolour",
+    "price": 190,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 3,
+    "raw_line": "12ShotsStandard 180",
+    "name": "12ShotsStandard",
+    "price": 180,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 3,
+    "raw_line": "12ShotsRaider 120",
+    "name": "12ShotsRaider",
+    "price": 120,
+    "image_name": "I62.jpg",
+    "has_image": true
+  },
+  {
+    "page": 4,
+    "raw_line": "6”Pipe2pcs 1580",
+    "name": "6”Pipe2pcs",
+    "price": 1580,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 4,
+    "raw_line": "5”Pipe2Pcs 900",
+    "name": "5”Pipe2Pcs",
+    "price": 900,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 4,
+    "raw_line": "5”PipeColorRSR 985",
+    "name": "5”PipeColorRSR",
+    "price": 985,
+    "image_name": "I63.jpg",
+    "has_image": true
+  },
+  {
+    "page": 4,
+    "raw_line": "4”Pipe2pcs 810",
+    "name": "4”Pipe2pcs",
+    "price": 810,
+    "image_name": "I64.jpg",
+    "has_image": true
+  },
+  {
+    "page": 4,
+    "raw_line": "4”PipeNiagaraGoldeEye 590",
+    "name": "4”PipeNiagaraGoldeEye",
+    "price": 590,
+    "image_name": "I65.jpg",
+    "has_image": true
+  },
+  {
+    "page": 4,
+    "raw_line": "4”PipePurpleOut 620",
+    "name": "4”PipePurpleOut",
+    "price": 620,
+    "image_name": "I66.jpg",
+    "has_image": true
+  },
+  {
+    "page": 5,
+    "raw_line": "3.5”Pipe 275",
+    "name": "3.5”Pipe",
+    "price": 275,
+    "image_name": "I67.jpg",
+    "has_image": true
+  },
+  {
+    "page": 5,
+    "raw_line": "3”pipestandard 340",
+    "name": "3”pipestandard",
+    "price": 340,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 5,
+    "raw_line": "3”Pipe 280",
+    "name": "3”Pipe",
+    "price": 280,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 5,
+    "raw_line": "3DPipe(3pcs)A 340",
+    "name": "3DPipe(3pcs)A",
+    "price": 340,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 5,
+    "raw_line": "3DPipe(3pcs) 280",
+    "name": "3DPipe(3pcs)",
+    "price": 280,
+    "image_name": "I68.jpg",
+    "has_image": true
+  },
+  {
+    "page": 5,
+    "raw_line": "2”Pipe 100",
+    "name": "2”Pipe",
+    "price": 100,
+    "image_name": "I69.jpg",
+    "has_image": true
+  },
+  {
+    "page": 6,
+    "raw_line": "2”PipeColor 65",
+    "name": "2”PipeColor",
+    "price": 65,
+    "image_name": "I70.jpg",
+    "has_image": true
+  },
+  {
+    "page": 6,
+    "raw_line": "1”PipeChitraFancy 45",
+    "name": "1”PipeChitraFancy",
+    "price": 45,
+    "image_name": "I71.jpg",
+    "has_image": true
+  },
+  {
+    "page": 6,
+    "raw_line": "Badapeacock 380",
+    "name": "Badapeacock",
+    "price": 380,
+    "image_name": "I72.jpg",
+    "has_image": true
+  },
+  {
+    "page": 6,
+    "raw_line": "peacockVeilMuthu 160",
+    "name": "peacockVeilMuthu",
+    "price": 160,
+    "image_name": "I73.jpg",
+    "has_image": true
+  },
+  {
+    "page": 6,
+    "raw_line": "PeacockSuccess 140",
+    "name": "PeacockSuccess",
+    "price": 140,
+    "image_name": "I74.jpg",
+    "has_image": true
+  },
+  {
+    "page": 6,
+    "raw_line": "ColourPentaMercury 250",
+    "name": "ColourPentaMercury",
+    "price": 250,
+    "image_name": "I75.jpg",
+    "has_image": true
+  },
+  {
+    "page": 7,
+    "raw_line": "HelicopterAyyan 140",
+    "name": "HelicopterAyyan",
+    "price": 140,
+    "image_name": "I76.jpg",
+    "has_image": true
+  },
+  {
+    "page": 7,
+    "raw_line": "Helicopter 100",
+    "name": "Helicopter",
+    "price": 100,
+    "image_name": "I77.jpg",
+    "has_image": true
+  },
+  {
+    "page": 7,
+    "raw_line": "Butterfly 80",
+    "name": "Butterfly",
+    "price": 80,
+    "image_name": "I78.jpg",
+    "has_image": true
+  },
+  {
+    "page": 7,
+    "raw_line": "RocketRainbowStandard 110",
+    "name": "RocketRainbowStandard",
+    "price": 110,
+    "image_name": "I79.jpg",
+    "has_image": true
+  },
+  {
+    "page": 7,
+    "raw_line": "RocketBombStandard 120",
+    "name": "RocketBombStandard",
+    "price": 120,
+    "image_name": "I80.jpg",
+    "has_image": true
+  },
+  {
+    "page": 7,
+    "raw_line": "RocketWhistling 220",
+    "name": "RocketWhistling",
+    "price": 220,
+    "image_name": "I81.jpg",
+    "has_image": true
+  },
+  {
+    "page": 8,
+    "raw_line": "Rocket3Sound 200",
+    "name": "Rocket3Sound",
+    "price": 200,
+    "image_name": "I82.png",
+    "has_image": true
+  },
+  {
+    "page": 8,
+    "raw_line": "Rocket2Sound 170",
+    "name": "Rocket2Sound",
+    "price": 170,
+    "image_name": "I84.jpg",
+    "has_image": true
+  },
+  {
+    "page": 8,
+    "raw_line": "RocketLunic 150",
+    "name": "RocketLunic",
+    "price": 150,
+    "image_name": "I85.jpg",
+    "has_image": true
+  },
+  {
+    "page": 8,
+    "raw_line": "RocketBomb 65",
+    "name": "RocketBomb",
+    "price": 65,
+    "image_name": "I86.jpg",
+    "has_image": true
+  },
+  {
+    "page": 8,
+    "raw_line": "FancyElephantFountain2in1 340",
+    "name": "FancyElephantFountain2in1",
+    "price": 340,
+    "image_name": "I87.jpg",
+    "has_image": true
+  },
+  {
+    "page": 8,
+    "raw_line": "FancyNemoFountain 180",
+    "name": "FancyNemoFountain",
+    "price": 180,
+    "image_name": "I88.jpg",
+    "has_image": true
+  },
+  {
+    "page": 9,
+    "raw_line": "CracklingFountainBig(3pcs) 380",
+    "name": "CracklingFountainBig(3pcs)",
+    "price": 380,
+    "image_name": "I89.jpg",
+    "has_image": true
+  },
+  {
+    "page": 9,
+    "raw_line": "AnarGiantStandard 290",
+    "name": "AnarGiantStandard",
+    "price": 290,
+    "image_name": "I90.jpg",
+    "has_image": true
+  },
+  {
+    "page": 9,
+    "raw_line": "AnarDeluxeStandard 250",
+    "name": "AnarDeluxeStandard",
+    "price": 250,
+    "image_name": "I91.jpg",
+    "has_image": true
+  },
+  {
+    "page": 9,
+    "raw_line": "AnarSpecialStandard 150",
+    "name": "AnarSpecialStandard",
+    "price": 150,
+    "image_name": "I92.jpg",
+    "has_image": true
+  },
+  {
+    "page": 9,
+    "raw_line": "AnarBigStandard 110",
+    "name": "AnarBigStandard",
+    "price": 110,
+    "image_name": "I93.png",
+    "has_image": true
+  },
+  {
+    "page": 9,
+    "raw_line": "AnarColourKoti 180",
+    "name": "AnarColourKoti",
+    "price": 180,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 10,
+    "raw_line": "AnarAshoka 90",
+    "name": "AnarAshoka",
+    "price": 90,
+    "image_name": "I95.jpg",
+    "has_image": true
+  },
+  {
+    "page": 10,
+    "raw_line": "AnarSpecial 70",
+    "name": "AnarSpecial",
+    "price": 70,
+    "image_name": "I96.jpg",
+    "has_image": true
+  },
+  {
+    "page": 10,
+    "raw_line": "AnarBig 55",
+    "name": "AnarBig",
+    "price": 55,
+    "image_name": "I97.jpg",
+    "has_image": true
+  },
+  {
+    "page": 10,
+    "raw_line": "Z.Chkr4*4wheel 180",
+    "name": "Z.Chkr4*4wheel",
+    "price": 180,
+    "image_name": "I98.jpg",
+    "has_image": true
+  },
+  {
+    "page": 10,
+    "raw_line": "Z.ChkrDeluxeStandard 165",
+    "name": "Z.ChkrDeluxeStandard",
+    "price": 165,
+    "image_name": "I99.jpg",
+    "has_image": true
+  },
+  {
+    "page": 10,
+    "raw_line": "Z.ChkrSpecialStandard 120",
+    "name": "Z.ChkrSpecialStandard",
+    "price": 120,
+    "image_name": "I100.jpg",
+    "has_image": true
+  },
+  {
+    "page": 11,
+    "raw_line": "Z.ChkrAshokaStandard 80",
+    "name": "Z.ChkrAshokaStandard",
+    "price": 80,
+    "image_name": "I101.jpg",
+    "has_image": true
+  },
+  {
+    "page": 11,
+    "raw_line": "Z.ChkrMusicalWheel 120",
+    "name": "Z.ChkrMusicalWheel",
+    "price": 120,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 11,
+    "raw_line": "Z.ChkrspinnerSpcl. 160",
+    "name": "Z.ChkrspinnerSpcl.",
+    "price": 160,
+    "image_name": "I102.jpg",
+    "has_image": true
+  },
+  {
+    "page": 11,
+    "raw_line": "Z.ChkrDelux 120",
+    "name": "Z.ChkrDelux",
+    "price": 120,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 11,
+    "raw_line": "Z.ChkrSpecial 100",
+    "name": "Z.ChkrSpecial",
+    "price": 100,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 11,
+    "raw_line": "Z.ChkrAshoka 70",
+    "name": "Z.ChkrAshoka",
+    "price": 70,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 12,
+    "raw_line": "Z.ChkrBig 45",
+    "name": "Z.ChkrBig",
+    "price": 45,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 12,
+    "raw_line": "TopTiger 220",
+    "name": "TopTiger",
+    "price": 220,
+    "image_name": "I103.jpg",
+    "has_image": true
+  },
+  {
+    "page": 12,
+    "raw_line": "IndianTiger 120",
+    "name": "IndianTiger",
+    "price": 120,
+    "image_name": "I104.jpg",
+    "has_image": true
+  },
+  {
+    "page": 12,
+    "raw_line": "555 95",
+    "name": "555",
+    "price": 95,
+    "image_name": "I105.jpg",
+    "has_image": true
+  },
+  {
+    "page": 12,
+    "raw_line": "SaddamSutliBomb 60",
+    "name": "SaddamSutliBomb",
+    "price": 60,
+    "image_name": "I106.jpg",
+    "has_image": true
+  },
+  {
+    "page": 12,
+    "raw_line": "DragonFightGesm 55",
+    "name": "DragonFightGesm",
+    "price": 55,
+    "image_name": "I107.jpg",
+    "has_image": true
+  },
+  {
+    "page": 13,
+    "raw_line": "Kitkat 30",
+    "name": "Kitkat",
+    "price": 30,
+    "image_name": "I108.jpg",
+    "has_image": true
+  },
+  {
+    "page": 13,
+    "raw_line": "BulletBomb 20",
+    "name": "BulletBomb",
+    "price": 20,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 13,
+    "raw_line": "SevenRed/GreeCock(3pcs) 120",
+    "name": "SevenRed/GreeCock(3pcs)",
+    "price": 120,
+    "image_name": "I109.jpg",
+    "has_image": true
+  },
+  {
+    "page": 13,
+    "raw_line": "SevenShotsColour 110",
+    "name": "SevenShotsColour",
+    "price": 110,
+    "image_name": "I110.jpg",
+    "has_image": true
+  },
+  {
+    "page": 13,
+    "raw_line": "SevenShots 110",
+    "name": "SevenShots",
+    "price": 110,
+    "image_name": "I111.jpg",
+    "has_image": true
+  },
+  {
+    "page": 13,
+    "raw_line": "3SoundBomb 55",
+    "name": "3SoundBomb",
+    "price": 55,
+    "image_name": "I112.jpg",
+    "has_image": true
+  },
+  {
+    "page": 14,
+    "raw_line": "2SoundBomb 30",
+    "name": "2SoundBomb",
+    "price": 30,
+    "image_name": "I113.jpg",
+    "has_image": true
+  },
+  {
+    "page": 14,
+    "raw_line": "6”SingleCrackerLion 65",
+    "name": "6”SingleCrackerLion",
+    "price": 65,
+    "image_name": "I114.jpg",
+    "has_image": true
+  },
+  {
+    "page": 14,
+    "raw_line": "5”SingleCrcaker 50",
+    "name": "5”SingleCrcaker",
+    "price": 50,
+    "image_name": "I115.jpg",
+    "has_image": true
+  },
+  {
+    "page": 14,
+    "raw_line": "4”GoldSinglCracker 45",
+    "name": "4”GoldSinglCracker",
+    "price": 45,
+    "image_name": "I116.jpg",
+    "has_image": true
+  },
+  {
+    "page": 14,
+    "raw_line": "4”DlxCracker 40",
+    "name": "4”DlxCracker",
+    "price": 40,
+    "image_name": "I117.jpg",
+    "has_image": true
+  },
+  {
+    "page": 14,
+    "raw_line": "4”SingleCracker 30",
+    "name": "4”SingleCracker",
+    "price": 30,
+    "image_name": "I118.jpg",
+    "has_image": true
+  },
+  {
+    "page": 15,
+    "raw_line": "3”LaxmiSinglesound 15",
+    "name": "3”LaxmiSinglesound",
+    "price": 15,
+    "image_name": "I119.jpg",
+    "has_image": true
+  },
+  {
+    "page": 15,
+    "raw_line": "2.75”BirdSinglesound 10",
+    "name": "2.75”BirdSinglesound",
+    "price": 10,
+    "image_name": "I120.jpg",
+    "has_image": true
+  },
+  {
+    "page": 15,
+    "raw_line": "10KCrackersStandard 3600",
+    "name": "10KCrackersStandard",
+    "price": 3600,
+    "image_name": "I121.jpg",
+    "has_image": true
+  },
+  {
+    "page": 15,
+    "raw_line": "5KCrackersStandard 1800",
+    "name": "5KCrackersStandard",
+    "price": 1800,
+    "image_name": "I122.jpg",
+    "has_image": true
+  },
+  {
+    "page": 15,
+    "raw_line": "2KCrackersStandard 800",
+    "name": "2KCrackersStandard",
+    "price": 800,
+    "image_name": "I123.jpg",
+    "has_image": true
+  },
+  {
+    "page": 15,
+    "raw_line": "1KCrackersStandard 400",
+    "name": "1KCrackersStandard",
+    "price": 400,
+    "image_name": "I124.jpg",
+    "has_image": true
+  },
+  {
+    "page": 16,
+    "raw_line": "10KCracker 1900",
+    "name": "10KCracker",
+    "price": 1900,
+    "image_name": "I125.jpg",
+    "has_image": true
+  },
+  {
+    "page": 16,
+    "raw_line": "5KCracker 950",
+    "name": "5KCracker",
+    "price": 950,
+    "image_name": "I126.jpg",
+    "has_image": true
+  },
+  {
+    "page": 16,
+    "raw_line": "2KCrackers 280",
+    "name": "2KCrackers",
+    "price": 280,
+    "image_name": "I127.jpg",
+    "has_image": true
+  },
+  {
+    "page": 16,
+    "raw_line": "1Kcracker 190",
+    "name": "1Kcracker",
+    "price": 190,
+    "image_name": "I128.jpg",
+    "has_image": true
+  },
+  {
+    "page": 16,
+    "raw_line": "Rassi4FeetStandard 125",
+    "name": "Rassi4FeetStandard",
+    "price": 125,
+    "image_name": "I129.jpg",
+    "has_image": true
+  },
+  {
+    "page": 16,
+    "raw_line": "Rassi4Feet 80",
+    "name": "Rassi4Feet",
+    "price": 80,
+    "image_name": "I130.jpg",
+    "has_image": true
+  },
+  {
+    "page": 17,
+    "raw_line": "Rassi1.5FeetStandard 55",
+    "name": "Rassi1.5FeetStandard",
+    "price": 55,
+    "image_name": "I131.jpg",
+    "has_image": true
+  },
+  {
+    "page": 17,
+    "raw_line": "Rassi1.5Feet 25",
+    "name": "Rassi1.5Feet",
+    "price": 25,
+    "image_name": "I132.jpg",
+    "has_image": true
+  },
+  {
+    "page": 17,
+    "raw_line": "Loose100PcsGold 35",
+    "name": "Loose100PcsGold",
+    "price": 35,
+    "image_name": "I133.jpg",
+    "has_image": true
+  },
+  {
+    "page": 17,
+    "raw_line": "LooseBijli(100pcs)Standard 50",
+    "name": "LooseBijli(100pcs)Standard",
+    "price": 50,
+    "image_name": "I134.jpg",
+    "has_image": true
+  },
+  {
+    "page": 17,
+    "raw_line": "LooseBijli(50Pcs) 25",
+    "name": "LooseBijli(50Pcs)",
+    "price": 25,
+    "image_name": "I135.jpg",
+    "has_image": true
+  },
+  {
+    "page": 17,
+    "raw_line": "Fuljhadi100CmSpecial 400",
+    "name": "Fuljhadi100CmSpecial",
+    "price": 400,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 18,
+    "raw_line": "Fuljhadi50CmSpecial 185",
+    "name": "Fuljhadi50CmSpecial",
+    "price": 185,
+    "image_name": "I136.jpg",
+    "has_image": true
+  },
+  {
+    "page": 18,
+    "raw_line": "Fuljhadi30CmRed/Green 70",
+    "name": "Fuljhadi30CmRed/Green",
+    "price": 70,
+    "image_name": "I137.jpg",
+    "has_image": true
+  },
+  {
+    "page": 18,
+    "raw_line": "Fuljhadi30CmClrCrackling 65",
+    "name": "Fuljhadi30CmClrCrackling",
+    "price": 65,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 18,
+    "raw_line": "Fuljhadi30CmElectric 60",
+    "name": "Fuljhadi30CmElectric",
+    "price": 60,
+    "image_name": "I138.jpg",
+    "has_image": true
+  },
+  {
+    "page": 18,
+    "raw_line": "Fuljhadi15CmRed/Green 60",
+    "name": "Fuljhadi15CmRed/Green",
+    "price": 60,
+    "image_name": "I139.jpg",
+    "has_image": true
+  },
+  {
+    "page": 18,
+    "raw_line": "Fuljhadi15CmElectric 50",
+    "name": "Fuljhadi15CmElectric",
+    "price": 50,
+    "image_name": "I140.jpg",
+    "has_image": true
+  },
+  {
+    "page": 19,
+    "raw_line": "Fuljhadi12CmClrCrackling 40",
+    "name": "Fuljhadi12CmClrCrackling",
+    "price": 40,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 19,
+    "raw_line": "Fuljhadi12CmElectric 35",
+    "name": "Fuljhadi12CmElectric",
+    "price": 35,
+    "image_name": "I141.jpg",
+    "has_image": true
+  },
+  {
+    "page": 19,
+    "raw_line": "Fuljhadi10CmElectric 25",
+    "name": "Fuljhadi10CmElectric",
+    "price": 25,
+    "image_name": "I142.jpg",
+    "has_image": true
+  },
+  {
+    "page": 19,
+    "raw_line": "Fuljhadi9Cmelectric 10",
+    "name": "Fuljhadi9Cmelectric",
+    "price": 10,
+    "image_name": null,
+    "has_image": false
+  },
+  {
+    "page": 19,
+    "raw_line": "RingCapSonny 10",
+    "name": "RingCapSonny",
+    "price": 10,
+    "image_name": "I143.jpg",
+    "has_image": true
+  },
+  {
+    "page": 19,
+    "raw_line": "serpant (10pcs) 25",
+    "name": "serpant (10pcs)",
+    "price": 25,
+    "image_name": "I144.jpg",
+    "has_image": true
+  },
+  {
+    "page": 20,
+    "raw_line": "WonderThrow",
+    "name": "WonderThrow",
+    "price": null,
+    "image_name": "I145.jpg",
+    "has_image": true
+  },
+  {
+    "page": 20,
+    "raw_line": "MatchisBomb(BidiBomb)1Pkt 12",
+    "name": "MatchisBomb(BidiBomb)1Pkt",
+    "price": 12,
+    "image_name": "I146.jpg",
+    "has_image": true
+  },
+  {
+    "page": 20,
+    "raw_line": "SkyLantern(Akashdiya) 18",
+    "name": "SkyLantern(Akashdiya)",
+    "price": 18,
+    "image_name": "I147.jpg",
+    "has_image": true
+  },
+  {
+    "page": 20,
+    "raw_line": "PopPopBox(50Pkt) 289",
+    "name": "PopPopBox(50Pkt)",
+    "price": 289,
+    "image_name": "I148.jpg",
+    "has_image": true
+  },
+  {
+    "page": 20,
+    "raw_line": "PopPopLoose (1box) 10",
+    "name": "PopPopLoose (1box)",
+    "price": 10,
+    "image_name": "I149.jpg",
+    "has_image": true
+  },
+  {
+    "page": 20,
+    "raw_line": "RollCap 89",
+    "name": "RollCap",
+    "price": 89,
+    "image_name": "I150.jpg",
+    "has_image": true
+  }
+]

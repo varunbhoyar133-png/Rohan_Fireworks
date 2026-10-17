@@ -13,8 +13,8 @@ const defaultSettings = {
     link: '/shop',
   },
   businessInfo: {
-    phone: '+91 98765 43210',
-    whatsapp: '+91 98765 43210',
+    phone: '+91 96999 76114',
+    whatsapp: '+91 96999 76114',
     email: 'contact@rohanfireworks.com',
     address: 'Plot 42, Festive Fireworks Market, Sivakasi Main Road, Tamil Nadu - 626123, India',
     businessHours: 'Monday – Sunday: 9:00 AM – 9:00 PM IST (Special Festive Extended Hours)',

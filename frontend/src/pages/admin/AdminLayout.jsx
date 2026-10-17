@@ -25,11 +25,21 @@ export const AdminLayout = () => {
   const location = useLocation();
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
-  // If session check in progress, show loading spinner
+  // If session check in progress, show branded loading screen
   if (loading) {
     return (
-      <div className="min-h-screen bg-midnight-950 flex items-center justify-center text-slate-400">
-        <Sparkles className="w-8 h-8 text-festive-gold animate-spin mb-2" />
+      <div className="min-h-screen bg-midnight-950 flex flex-col items-center justify-center text-slate-400 gap-4">
+        <div className="relative">
+          <img
+            src="/rohan-icon.png"
+            alt="Rohan Fireworks logo"
+            className="w-16 h-16 object-contain animate-pulse filter drop-shadow-[0_0_15px_rgba(245,158,11,0.3)]"
+          />
+        </div>
+        <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-festive-gold uppercase">
+          <Sparkles className="w-4 h-4 animate-spin text-festive-gold" />
+          <span>Loading Admin Portal...</span>
+        </div>
       </div>
     );
   }
@@ -58,7 +68,7 @@ export const AdminLayout = () => {
     <div className="min-h-screen bg-midnight-950 text-slate-100 flex flex-col md:flex-row">
       {/* Mobile Header Bar */}
       <div className="md:hidden flex items-center justify-between p-4 bg-midnight-900 border-b border-slate-800">
-        <BrandLogo showTagline={false} size="default" />
+        <BrandLogo size="small" />
         <button
           onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
           className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800"

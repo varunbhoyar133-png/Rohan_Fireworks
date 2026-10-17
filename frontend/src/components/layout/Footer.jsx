@@ -18,7 +18,7 @@ export const Footer = () => {
   const info = settings?.businessInfo || {};
   const policies = settings?.policies || {};
 
-  const cleanWhatsApp = (info.whatsapp || '+919876543210').replace(/[^0-9]/g, '');
+  const cleanWhatsApp = (info.whatsapp || '+919699976114').replace(/[^0-9]/g, '');
 
   return (
     <footer className="bg-midnight-950 border-t border-festive-gold/15 pt-16 pb-8 text-slate-400">
@@ -26,7 +26,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
           {/* Col 1: Brand & Safety Mission */}
           <div className="space-y-4">
-            <BrandLogo size="default" />
+            <BrandLogo size="footer" />
             <p className="text-xs text-slate-300 leading-relaxed">
               Rohan Fireworks is committed to illuminating your festive celebrations with certified, safe, and quality-tested Green Crackers adhering strictly to Indian regulatory guidelines.
             </p>
@@ -141,7 +141,7 @@ export const Footer = () => {
             <div className="flex items-center gap-2.5 text-xs">
               <Phone className="w-4 h-4 text-festive-gold flex-shrink-0" />
               <a href={`tel:${info.phone}`} className="hover:text-white transition-colors">
-                {info.phone || '+91 98765 43210'}
+                {info.phone || '+91 96999 76114'}
               </a>
             </div>
             <div className="flex items-center gap-2.5 text-xs">

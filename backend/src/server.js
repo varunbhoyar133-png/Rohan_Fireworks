@@ -9,6 +9,7 @@ import { fileURLToPath } from 'url';
 import { connectDB } from './config/db.js';
 import { seedDatabase } from './scripts/seed.js';
 import Category from './models/Category.js';
+import Product from './models/Product.js';
 
 import authRoutes from './routes/authRoutes.js';
 import categoryRoutes from './routes/categoryRoutes.js';
@@ -89,10 +90,10 @@ const startServer = async () => {
   try {
     await connectDB();
 
-    // Auto-seed if category table is empty (ensures initial setup runs without manual steps)
-    const count = await Category.countDocuments();
-    if (count === 0) {
-      console.log('[Server] No categories detected. Running automatic initial data seed...');
+    // Auto-seed if database is unseeded or has fewer than 119 products from source catalogue
+    const productCount = await Product.countDocuments();
+    if (productCount < 119) {
+      console.log(`[Server] Detected ${productCount} products in database. Auto-importing all 119 products from source price list...`);
       await seedDatabase();
     }
 

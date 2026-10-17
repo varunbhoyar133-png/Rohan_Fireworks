@@ -110,7 +110,7 @@ export const EnquiryProvider = ({ children }) => {
   };
 
   const openWhatsAppEnquiry = (customerName = '', city = '') => {
-    const rawPhone = settings?.businessInfo?.whatsapp || '+919876543210';
+    const rawPhone = settings?.businessInfo?.whatsapp || '+919699976114';
     const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
     const message = getWhatsAppEnquiryMessage(customerName, city);
     const url = `https://wa.me/${cleanPhone}?text=${message}`;

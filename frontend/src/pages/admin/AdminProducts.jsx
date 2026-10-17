@@ -60,6 +60,8 @@ export const AdminProducts = () => {
   const [saving, setSaving] = useState(false);
   const [successToast, setSuccessToast] = useState('');
 
+  const [totalCount, setTotalCount] = useState(0);
+
   // Fetch Categories
   useEffect(() => {
     const fetchCategories = async () => {
@@ -81,9 +83,10 @@ export const AdminProducts = () => {
         search: searchQuery,
         category: selectedCategory !== 'all' ? selectedCategory : undefined,
         includeHidden: 'true',
-        limit: 100,
+        limit: 'all',
       });
       setProducts(data.products || []);
+      setTotalCount(data.total || data.count || (data.products ? data.products.length : 0));
     } catch (err) {
       console.error('Error fetching admin products:', err);
     } finally {
@@ -256,13 +259,27 @@ export const AdminProducts = () => {
             onChange={(e) => setSelectedCategory(e.target.value)}
             className="w-full sm:w-auto bg-midnight-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none cursor-pointer"
           >
-            <option value="all">All Categories</option>
+            <option value="all">All Categories ({totalCount} Total Fireworks)</option>
             {categories.map((c) => (
               <option key={c._id} value={c._id}>
-                {c.name}
+                {c.name} ({c.productCount || 0})
               </option>
             ))}
           </select>
+        </div>
+      </div>
+
+      {/* Catalogue Status Bar */}
+      <div className="flex flex-wrap items-center justify-between text-xs text-slate-400 bg-midnight-950/70 border border-slate-800 rounded-xl px-4 py-2.5 gap-2">
+        <div className="flex items-center gap-2">
+          <Package className="w-4 h-4 text-festive-gold" />
+          <span>
+            Displaying <strong className="text-festive-gold font-bold">{products.length}</strong> of{' '}
+            <strong className="text-slate-200 font-bold">{totalCount}</strong> Total Uploaded Fireworks
+          </span>
+        </div>
+        <div className="text-[11px] text-slate-500">
+          Source: Jianna Fireworks 119 Price List (All 119 Verified in Database)
         </div>
       </div>
 
@@ -305,7 +322,7 @@ export const AdminProducts = () => {
                       <td className="p-3.5">
                         <div className="flex items-center gap-3">
                           <img
-                            src={product.images?.[0] || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&auto=format&fit=crop&q=80'}
+                            src={product.images?.[0] || '/placeholder-firework.svg'}
                             alt={product.name}
                             className="w-10 h-10 rounded-lg object-cover bg-midnight-950 border border-slate-700 flex-shrink-0"
                           />

@@ -55,9 +55,16 @@ export const ProductDetail = () => {
 
   if (loading) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center text-slate-400">
-        <Sparkles className="w-8 h-8 text-festive-gold animate-spin mx-auto mb-3" />
-        <p className="text-xs">Loading festive product details...</p>
+      <div className="max-w-7xl mx-auto px-4 py-20 text-center text-slate-400 flex flex-col items-center justify-center gap-3">
+        <img
+          src="/rohan-icon.png"
+          alt="Rohan Fireworks logo"
+          className="w-12 h-12 object-contain animate-pulse filter drop-shadow-[0_0_12px_rgba(245,158,11,0.25)]"
+        />
+        <div className="flex items-center gap-2 text-xs text-festive-gold">
+          <Sparkles className="w-3.5 h-3.5 animate-spin" />
+          <span>Loading festive product details...</span>
+        </div>
       </div>
     );
   }
@@ -90,7 +97,7 @@ export const ProductDetail = () => {
   };
 
   const handleDirectWhatsApp = () => {
-    const rawPhone = settings?.businessInfo?.whatsapp || '+919876543210';
+    const rawPhone = settings?.businessInfo?.whatsapp || '+919699976114';
     const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
     const message = encodeURIComponent(
       `*🪔 Direct Product Enquiry — Rohan Fireworks*\n` +
@@ -134,7 +141,7 @@ export const ProductDetail = () => {
         <div className="space-y-4">
           <div className="relative aspect-square rounded-3xl overflow-hidden bg-midnight-900 border border-festive-gold/30 shadow-2xl">
             <img
-              src={selectedImage || product.images?.[0]}
+              src={selectedImage || product.images?.[0] || '/placeholder-firework.svg'}
               alt={product.name}
               className="w-full h-full object-cover"
             />
@@ -184,13 +191,21 @@ export const ProductDetail = () => {
 
             {/* Price & Stock Badge */}
             <div className="flex items-baseline gap-3 pt-1">
-              <span className="text-3xl font-extrabold text-festive-gold">
-                ₹{product.price.toLocaleString('en-IN')}
-              </span>
-              {product.originalPrice && product.originalPrice > product.price && (
-                <span className="text-base text-slate-400 line-through">
-                  ₹{product.originalPrice.toLocaleString('en-IN')}
+              {product.priceNeedsReview || !product.price ? (
+                <span className="text-base font-bold text-amber-400 bg-amber-950/80 px-3 py-1 rounded border border-amber-500/30">
+                  Price on Enquiry (Under Review)
                 </span>
+              ) : (
+                <>
+                  <span className="text-3xl font-extrabold text-festive-gold">
+                    ₹{product.price.toLocaleString('en-IN')}
+                  </span>
+                  {product.originalPrice && product.originalPrice > product.price && (
+                    <span className="text-base text-slate-400 line-through">
+                      ₹{product.originalPrice.toLocaleString('en-IN')}
+                    </span>
+                  )}
+                </>
               )}
               <span className="text-xs text-slate-400">/ {product.packSize || '1 Pack'}</span>
 

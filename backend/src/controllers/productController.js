@@ -27,11 +27,12 @@ export const getProducts = async (req, res, next) => {
       filter.isVisible = true;
     }
 
-    // Search by name, SKU or description
+    // Search by name, original source name, SKU or description
     if (search && search.trim() !== '') {
       const regex = new RegExp(search.trim(), 'i');
       filter.$or = [
         { name: regex },
+        { originalName: regex },
         { sku: regex },
         { description: regex },
       ];
@@ -90,9 +91,10 @@ export const getProducts = async (req, res, next) => {
         break;
     }
 
-    const pageNum = Math.max(1, parseInt(page, 10));
-    const limitNum = Math.max(1, parseInt(limit, 10));
-    const skip = (pageNum - 1) * limitNum;
+    const pageNum = Math.max(1, parseInt(page, 10) || 1);
+    const isAll = limit === 'all' || limit === '0' || limit === 0;
+    const limitNum = isAll ? 1000 : Math.max(1, parseInt(limit, 10) || 12);
+    const skip = isAll ? 0 : (pageNum - 1) * limitNum;
 
     const [products, total] = await Promise.all([
       Product.find(filter)
@@ -107,8 +109,8 @@ export const getProducts = async (req, res, next) => {
       success: true,
       count: products.length,
       total,
-      page: pageNum,
-      totalPages: Math.ceil(total / limitNum),
+      page: isAll ? 1 : pageNum,
+      totalPages: isAll ? 1 : Math.ceil(total / limitNum),
       products,
     });
   } catch (error) {
@@ -204,16 +206,20 @@ export const createProduct = async (req, res, next) => {
     } else if (req.body.images && Array.isArray(req.body.images)) {
       images = req.body.images;
     } else {
-      // Default festive placeholder if none provided
-      images.push('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80');
+      // Branded placeholder if none provided
+      images.push('/placeholder-firework.svg');
     }
+
+    const { originalName, priceNeedsReview } = req.body;
 
     const product = await Product.create({
       name,
+      originalName: originalName || name,
       sku: cleanSku,
       category,
       description,
       price: Number(price),
+      priceNeedsReview: priceNeedsReview === true || priceNeedsReview === 'true',
       originalPrice: originalPrice ? Number(originalPrice) : null,
       stock: Number(stock),
       lowStockThreshold: Number(lowStockThreshold),
@@ -315,6 +321,8 @@ export const updateProduct = async (req, res, next) => {
     if (isGreenCracker !== undefined) product.isGreenCracker = isGreenCracker === 'true' || isGreenCracker === true;
     if (isFeatured !== undefined) product.isFeatured = isFeatured === 'true' || isFeatured === true;
     if (isVisible !== undefined) product.isVisible = isVisible === 'true' || isVisible === true;
+    if (req.body.originalName !== undefined) product.originalName = req.body.originalName;
+    if (req.body.priceNeedsReview !== undefined) product.priceNeedsReview = req.body.priceNeedsReview === 'true' || req.body.priceNeedsReview === true;
 
     // Handle Image
     if (req.file) {

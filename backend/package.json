@@ -8,6 +8,7 @@
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "seed": "node src/scripts/seed.js",
+    "import:catalogue": "node src/scripts/importCatalogue.js",
     "create-admin": "node src/scripts/createAdmin.js"
   },
   "dependencies": {

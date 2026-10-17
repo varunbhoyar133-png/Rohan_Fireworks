@@ -267,7 +267,7 @@ export const AdminSettings = () => {
                     businessInfo: { ...formData.businessInfo, phone: e.target.value },
                   })
                 }
-                placeholder="+91 98765 43210"
+                placeholder="+91 96999 76114"
                 className="w-full bg-midnight-950 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-festive-gold"
               />
             </div>
@@ -285,7 +285,7 @@ export const AdminSettings = () => {
                     businessInfo: { ...formData.businessInfo, whatsapp: e.target.value },
                   })
                 }
-                placeholder="+91 98765 43210"
+                placeholder="+91 96999 76114"
                 className="w-full bg-midnight-950 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-festive-gold"
               />
             </div>

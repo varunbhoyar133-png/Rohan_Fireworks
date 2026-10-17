@@ -48,7 +48,7 @@ export const Home = () => {
 
   const promo = settings?.promoBanner || {};
   const business = settings?.businessInfo || {};
-  const cleanWhatsApp = (business.whatsapp || '+919876543210').replace(/[^0-9]/g, '');
+  const cleanWhatsApp = (business.whatsapp || '+919699976114').replace(/[^0-9]/g, '');
 
   return (
     <div className="space-y-20 pb-20">
@@ -362,7 +362,7 @@ export const Home = () => {
                 href={`tel:${business.phone}`}
                 className="inline-block text-sm font-bold text-festive-gold hover:underline"
               >
-                {business.phone || '+91 98765 43210'}
+                {business.phone || '+91 96999 76114'}
               </a>
             </div>
 

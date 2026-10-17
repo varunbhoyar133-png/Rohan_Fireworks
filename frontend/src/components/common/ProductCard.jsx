@@ -21,8 +21,9 @@ export const ProductCard = ({ product, onQuickView }) => {
   };
 
   const primaryImage =
-    product.images?.[0] ||
-    'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80';
+    (product.images && product.images.length > 0 && product.images[0])
+      ? product.images[0]
+      : '/placeholder-firework.svg';
 
   return (
     <div className="group relative rounded-2xl bg-midnight-900 border border-slate-800/90 hover:border-festive-gold/40 transition-all duration-300 flex flex-col overflow-hidden hover:shadow-gold">
@@ -121,13 +122,21 @@ export const ProductCard = ({ product, onQuickView }) => {
         <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
           <div className="flex flex-col">
             <div className="flex items-baseline gap-1.5">
-              <span className="text-lg font-bold text-festive-gold">
-                ₹{product.price.toLocaleString('en-IN')}
-              </span>
-              {product.originalPrice && product.originalPrice > product.price && (
-                <span className="text-xs text-slate-400 line-through">
-                  ₹{product.originalPrice.toLocaleString('en-IN')}
+              {product.priceNeedsReview || !product.price ? (
+                <span className="text-xs font-bold text-amber-400 bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30">
+                  Price on Enquiry
                 </span>
+              ) : (
+                <>
+                  <span className="text-lg font-bold text-festive-gold">
+                    ₹{product.price.toLocaleString('en-IN')}
+                  </span>
+                  {product.originalPrice && product.originalPrice > product.price && (
+                    <span className="text-xs text-slate-400 line-through">
+                      ₹{product.originalPrice.toLocaleString('en-IN')}
+                    </span>
+                  )}
+                </>
               )}
             </div>
             <span className="text-[10px] text-slate-400">Catalogue Rate</span>

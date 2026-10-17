@@ -29,10 +29,18 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Product description is required'],
   },
+  originalName: {
+    type: String,
+    trim: true,
+  },
   price: {
     type: Number,
     required: [true, 'Product price is required'],
     min: [0, 'Price cannot be negative'],
+  },
+  priceNeedsReview: {
+    type: Boolean,
+    default: false,
   },
   originalPrice: {
     type: Number,

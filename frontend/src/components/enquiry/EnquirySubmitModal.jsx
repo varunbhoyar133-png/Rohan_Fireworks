@@ -100,7 +100,7 @@ export const EnquirySubmitModal = () => {
   };
 
   const handleSendToWhatsApp = () => {
-    const rawPhone = settings?.businessInfo?.whatsapp || '+919876543210';
+    const rawPhone = settings?.businessInfo?.whatsapp || '+919699976114';
     const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
     const enqNum = submittedEnquiry?.enquiryNumber || 'RF-ENQ';
 
@@ -234,7 +234,7 @@ export const EnquirySubmitModal = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="e.g. +91 98765 43210"
+                    placeholder="e.g. +91 96999 76114"
                     className="w-full bg-midnight-950 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-festive-gold"
                   />
                 </div>

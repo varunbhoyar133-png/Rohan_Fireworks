@@ -9,6 +9,7 @@
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",
     "seed": "npm --prefix backend run seed",
+    "import:catalogue": "npm --prefix backend run import:catalogue",
     "build": "npm --prefix frontend run build"
   },
   "devDependencies": {
