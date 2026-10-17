@@ -1,4 +1,14 @@
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+const getBaseUrl = () => {
+  if (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  if (typeof process !== 'undefined' && process.env?.BACKEND_URL) {
+    return `${process.env.BACKEND_URL}/api`;
+  }
+  return '/api';
+};
+
+const API_BASE = getBaseUrl();
 
 export const getAuthToken = () => localStorage.getItem('rohan_admin_token');
 export const setAuthToken = (token) => localStorage.setItem('rohan_admin_token', token);

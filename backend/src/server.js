@@ -41,8 +41,13 @@ const allowedOrigins = process.env.CLIENT_URL
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, curl, postman) or matching allowed origins
-    if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {
+    // Allow requests with no origin, matching allowed origins, local dev, or vercel preview deployments
+    if (
+      !origin ||
+      allowedOrigins.includes(origin) ||
+      process.env.NODE_ENV !== 'production' ||
+      origin.endsWith('.vercel.app')
+    ) {
       callback(null, true);
     } else {
       callback(new Error('Blocked by CORS policy'));
@@ -97,14 +102,20 @@ const startServer = async () => {
       await seedDatabase();
     }
 
-    app.listen(PORT, () => {
-      console.log(`[Rohan Fireworks API] Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
-      console.log(`[Rohan Fireworks API] Health check: http://localhost:${PORT}/api/health`);
-    });
+    if (process.env.VERCEL !== '1') {
+      app.listen(PORT, () => {
+        console.log(`[Rohan Fireworks API] Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
+        console.log(`[Rohan Fireworks API] Health check: http://localhost:${PORT}/api/health`);
+      });
+    }
   } catch (error) {
     console.error('[Server] Critical failure during startup:', error);
-    process.exit(1);
+    if (process.env.VERCEL !== '1') {
+      process.exit(1);
+    }
   }
 };
 
 startServer();
+
+export default app;
